@@ -1,0 +1,12 @@
+{%  extends "base.html" %}
+
+{% block app_content %}
+<h1>Hy {{username|capitalize}} <br> You are welcome to my blog</h1>
+<div>
+<form action="{{url_for ('predict')}}" method="post">
+<input type="text" name="year" placeholder="year" required="required" />
+<button type="submit" class="btn">Predict</button></form>
+</div>
+{{prediction_text}}
+
+{% endblock %}
